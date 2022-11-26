@@ -6,6 +6,7 @@ import MealSearch from "@/views/MealSearch";
 import MealsByLetter from "@/views/MealsByLetter";
 import MealsByIngredient from "@/views/MealsByIngredient";
 import CategoryDetails from "@/components/category/CategoryDetails";
+import MealDetails from "@/components/filterMeals/MealDetails";
 
 const routes = [
   {
@@ -29,9 +30,16 @@ const routes = [
         props: true
       },
       {
-        path: '/meal-filter',
+        path: '/meal-details/:id?',
+        name: "MealDetails",
+        component: MealDetails,
+        props: true
+      },
+      {
+        path: '/meal-filter/:filterText?',
         name: "MealSearch",
         component: MealSearch,
+        props: true
       },
       {
         path: '/meals-by-letter',

@@ -44,6 +44,6 @@ export default {
   margin: 0 auto;
   float: none;
   margin-bottom: 10px;
-
 }
+
 </style>
