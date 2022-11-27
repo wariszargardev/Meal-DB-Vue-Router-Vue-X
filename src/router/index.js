@@ -42,9 +42,10 @@ const routes = [
         props: true
       },
       {
-        path: '/meals-by-letter',
+        path: '/meals-by-letter/:letter?',
         name: "MealsByLetter",
         component: MealsByLetter,
+        props: true
       },
       {
         path: '/meals-by-ingredient',

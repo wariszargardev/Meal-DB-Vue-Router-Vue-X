@@ -1,5 +1,9 @@
 <template>
-  <h5><b>Meal ID:</b> {{ $route.params.id }}</h5>
+  <h5>
+    <b>Meal ID:</b> {{ $route.params.id }}
+    <YoutubeButton :href="mealDetails.strYoutube">Youtube</YoutubeButton>
+  </h5>
+
   <div class="mt-3" v-if="mealDetails && mealDetails.idMeal">
     <div class="card mb-3">
       <div class="row g-0" style="max-height: 350px">
@@ -18,6 +22,7 @@
             <button type="button" class="btn btn-outline-success mr-1" v-for="tag in mealDetails.strTags.split(',')"
                     :key="tag">{{ tag }}
             </button>
+
           </div>
 
         </div>
@@ -62,6 +67,8 @@
 
       </div>
     </div>
+
+
   </div>
   <div v-else>
     <div class="d-flex justify-content-center mt-5">
@@ -74,9 +81,11 @@
 
 <script>
 import {mapActions, mapGetters} from "vuex";
+import YoutubeButton from "@/components/YoutubeButton";
 
 export default {
   name: "MealDetails",
+  components: {YoutubeButton},
   props: ['id'],
   computed: {
     ...mapGetters(['mealDetails'])

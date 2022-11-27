@@ -9,7 +9,7 @@
         <p class="card-text">
           {{ meal.strInstructions }}
         </p>
-        <a :href="meal.strYoutube" target="_blank" class="btn btn-outline-primary float-start">Youtube</a>
+        <YoutubeButton :href="meal.strYoutube" >Visit youtube</YoutubeButton>
         <router-link :to="{name: 'MealDetails', params: {id: meal.idMeal} }" class="btn btn-outline-success float-end">View Details</router-link>
       </div>
     </div>
@@ -17,8 +17,10 @@
 </template>
 
 <script>
+import YoutubeButton from "@/components/YoutubeButton";
 export default {
   name: "SingleMeal",
+  components: {YoutubeButton},
   props: ['meal']
 }
 </script>
