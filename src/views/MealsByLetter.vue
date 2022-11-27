@@ -3,6 +3,13 @@
   <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
     <SingleMeal v-for="meal in allLettersMeals" :meal="meal" :key="meal.idMeal" />
   </div>
+
+  <div v-if="!allLettersMeals.length">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>Sorry!</strong> No meal available
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
 </template>
 
 <script>

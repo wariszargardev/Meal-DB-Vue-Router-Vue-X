@@ -19,17 +19,10 @@
             <router-link :to="{name: 'MealSearch'}" class="nav-link px-2 text-white">Meals Listing</router-link>
           </li>
           <li>
-            <router-link :to="{name: 'MealsByLetter'}" class="nav-link px-2 text-white">Meals by Letter</router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'MealsByIngredient'}" class="nav-link px-2 text-white">Meals by Ingredient</router-link>
+            <router-link :to="{name: 'MealsByLetter', params:{ letter: 'A' }}" class="nav-link px-2 text-white">Meals by Letter</router-link>
           </li>
         </ul>
 
-        <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-outline-info">Sign-up</button>
-        </div>
       </div>
     </div>
   </header>

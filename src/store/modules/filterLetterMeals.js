@@ -7,7 +7,7 @@ const state={
 
 const getters= {
     allLettersMeals: (state) =>{
-        return state.letterMeals
+        return state.letterMeals || []
     }
 }
 

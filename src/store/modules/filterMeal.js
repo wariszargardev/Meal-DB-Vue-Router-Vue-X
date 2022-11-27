@@ -8,7 +8,7 @@ const state={
 
 const getters= {
     allMeals: (state) =>{
-        return state.filterMeals
+        return state.filterMeals || []
     },
 
     mealDetails: (state) =>{

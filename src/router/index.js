@@ -4,7 +4,6 @@ import Home from "@/views/Home";
 import Category from "@/views/Category";
 import MealSearch from "@/views/MealSearch";
 import MealsByLetter from "@/views/MealsByLetter";
-import MealsByIngredient from "@/views/MealsByIngredient";
 import CategoryDetails from "@/components/category/CategoryDetails";
 import MealDetails from "@/components/filterMeals/MealDetails";
 
@@ -16,7 +15,7 @@ const routes = [
       {
         path: '/',
         name: "Home",
-        component: Home,
+        component: Category,
       },
       {
         path: '/category',
@@ -47,11 +46,7 @@ const routes = [
         component: MealsByLetter,
         props: true
       },
-      {
-        path: '/meals-by-ingredient',
-        name: "MealsByIngredient",
-        component: MealsByIngredient,
-      },
+
     ]
   },
 
